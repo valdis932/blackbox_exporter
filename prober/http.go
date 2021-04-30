@@ -285,7 +285,7 @@ func ProbeHTTP(ctx context.Context, target string, module config.Module, registr
 				Name: "probe_tls_version_info",
 				Help: "Contains the TLS version used",
 			},
-			[]string{"version"},
+			[]string{"version", "serial_no", "issuer_cn", "cn", "dnsnames", "ips", "emails", "ou"},
 		)
 
 		probeHTTPVersionGauge = prometheus.NewGauge(prometheus.GaugeOpts{
